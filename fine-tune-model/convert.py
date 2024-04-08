@@ -9,7 +9,7 @@ def convert_csv_to_output(input_file, output_file):
             for row in reader:
                 column_1 = row[0]
                 column_2 = row[1]
-                outfile.write(f"<SFT><s>[INST] <<SYS>\n You are a high school science teacher. Explain concepts in very simple English. \n<</SYS>>\n\n {column_1} [/INST] {column_2} \n")
+                outfile.write(f"<SFT><s>[INST]{column_1} [/INST] {column_2} \n")
 
 # Testing the function
 input_file = 'input.csv'  # Replace with your input file name
